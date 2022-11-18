@@ -1,0 +1,9 @@
+input {
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+body {
+    width: 200px;
+}

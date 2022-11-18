@@ -1,0 +1,13 @@
+table {
+    border-collapse: collapse;
+}
+
+table tr td, table tr th {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 0.5rem 0.5rem;
+}
+
+.search-box {
+    margin-bottom: 2rem;
+}
