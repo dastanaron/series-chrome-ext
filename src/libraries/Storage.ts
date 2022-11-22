@@ -58,6 +58,18 @@ export class Storage {
     return found;
   }
 
+  async findByUrl(url: string): Promise<SeriesInfo | null> {
+    const data = await this.getAll();
+
+    for (const series of data) {
+      if (series.url === url) {
+        return series;
+      }
+    }
+
+    return null
+  }
+
   async findById(id: string): Promise<number> {
     const data = await this.getAll();
 

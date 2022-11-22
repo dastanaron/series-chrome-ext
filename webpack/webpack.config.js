@@ -2,7 +2,7 @@ const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
 	mode: "production",
-	devtool: 'source-map',
+	devtool: process.env.NODE_ENV === 'dev' ? 'source-map' : false,
 	entry: {
 		background: path.resolve(__dirname, "..", "src", "background.ts"),
 		popup: path.resolve(__dirname, "..", "src", "popup.ts"),

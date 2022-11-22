@@ -9,14 +9,21 @@ document.addEventListener('DOMContentLoaded', async function () {
     searchLink.setAttribute('href', searchPage);
 
     const tabs = await chrome.tabs.query({active: true, currentWindow: true});
-    const currentUrl = tabs[0].url;
+    const currentUrl = tabs[0].url || '';
+
+    const foundSeries = await Storage.findByUrl(currentUrl);
+
+    if (foundSeries) {
+        document.querySelector<HTMLInputElement>('#form input[name="name"]')!.value = foundSeries.name;
+        document.querySelector<HTMLInputElement>('#form input[name="season"]')!.value = foundSeries.season.toString();
+    }
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
         const formData = new FormData(form);
 
-        formData.set('url', currentUrl || '');
+        formData.set('url', currentUrl);
 
         const name = formData.has('name') ? formData.get('name')!.toString() : '';
 
