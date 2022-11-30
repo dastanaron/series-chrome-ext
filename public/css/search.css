@@ -1,13 +1,82 @@
-table {
+table.search-result {
     border-collapse: collapse;
+    width: 100%;
 }
 
-table tr td, table tr th {
-    border: 1px solid #000;
+table.search-result tr td, table.search-result tr th {
+    border: 1px solid #ebebeb;
     text-align: center;
     padding: 0.5rem 0.5rem;
 }
 
 .search-box {
     margin-bottom: 2rem;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.logo-container .logo-image {
+    background: transparent url(chrome-extension://egeapdhpebjgppgoedkmmjpekkepnjld/icons/logo_256.png) center center no-repeat;
+    width: 256px;
+    height: 256px;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.search-input {
+    width: 78%;
+    padding: 0.5rem;
+    outline: 0;
+    border: 1px solid #ebebeb;
+    border-radius: 6px;
+}
+
+.search-submit {
+    width: 10%;
+    padding: 0.2rem;
+    outline: 0;
+    border: 1px solid #ebebeb;
+    border-radius: 6px;
+    background: #02006c;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-submit > svg {
+    width: 1.1rem;
+    fill: #fff;
+}
+
+.search-reset {
+    width: 10%;
+    padding: 0.2rem;
+    outline: 0;
+    border: 1px solid #ebebeb;
+    border-radius: 6px;
+    background: #f5f5f5;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
 }

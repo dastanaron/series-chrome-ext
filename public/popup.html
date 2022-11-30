@@ -6,12 +6,17 @@
     </head>
     <body>
         <form id="form">
-            <input type="text" name="name" placeholder="name" />
-            <input type="number" name="season" placeholder="season" />
-            <input type="number" name="episode" placeholder="episode" />
-            <input type="submit" value="save" />
+            <input class="popup-input" type="text" name="name" placeholder="name" />
+            <input class="popup-input" type="number" name="season" placeholder="season" />
+            <input class="popup-input" type="number" name="episode" placeholder="episode" />
+            <button type="submit" class="popup-submit">
+                Save
+            </button>
         </form>
-        <a href="#" target="_blank" id="search">Search</a>
+        <div class="popup-bottom">
+            <a class="popup-link" href="#" target="_blank" id="search">To search page</a>
+        </div>
+
         <script src="./popup.js"></script>
     </body>
 </html>
