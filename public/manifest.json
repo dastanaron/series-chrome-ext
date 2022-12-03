@@ -1,7 +1,7 @@
 {
 	"name": "Series Saver",
 	"description": "This extension is remembering you notice about TV series",
-	"version": "1.2",
+	"version": "1.3",
 	"manifest_version": 3,
 	"icons": {
 		"16": "./icons/logo_16.png",

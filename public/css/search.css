@@ -28,7 +28,7 @@ table.search-result tr td, table.search-result tr th {
 }
 
 .logo-container .logo-image {
-    background: transparent url(chrome-extension://egeapdhpebjgppgoedkmmjpekkepnjld/icons/logo_256.png) center center no-repeat;
+    background: transparent url(chrome-extension://__MSG_@@extension_id__/icons/logo_256.png) center center no-repeat;
     width: 256px;
     height: 256px;
 }
@@ -79,4 +79,21 @@ table.search-result tr td, table.search-result tr th {
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
+}
+
+button.delete {
+    padding: 0.2rem;
+    outline: 0;
+    border: 0;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 35px;
+    background: transparent;
+}
+
+button.delete svg {
+    width: 100%;
+    height: auto;
 }
